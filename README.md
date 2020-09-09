@@ -7,7 +7,7 @@ A simple mp4 audio normalizer written in NodeJS (EBU R128)
 1. Clone the repo
 2. Run `npm install`
 3. Create a `input` and `output` folder
-4. Put your input files (mp4 only) in the input folder and run `node index.js`
+4. Put your input files (mp4 only) in the `input` folder and run `node index.js`
 5. Recover your files in output folder
 
 
