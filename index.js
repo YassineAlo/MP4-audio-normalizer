@@ -10,9 +10,10 @@ const inputList = fs.readdirSync('./input')
 const asyncNorm = async () => {
 
     for (i=0; i < inputList.length;i++) {
-        console.log(inputList[i])
+        // console.log(inputList[i])
         // Saves initial filename
         var filename = inputList[i]
+        console.log("En cours: " + filename + "("+i+"/"+inputList.length+")")
         // Change name to avoid ffmpeg command errors
         fs.renameSync('./input/'+ inputList[i], './input/input'+ i + '.mp4')
         await normalize({
@@ -27,13 +28,14 @@ const asyncNorm = async () => {
                     input_tp: -2.0
                 }
             },
-            verbose: true
+            verbose: false
         })
         .then(normalized  => {
             // Once Normalized
             // Rename back to original name
-            fs.renameSync('./output/input'+ i + '.mp4', './output/'+filename)
+            fs.renameSync('./output/input'+ i + '.mp4', './output/'+ filename)
             console.log("Fini :  ", normalized)
+            console.log("Fini :  ", filename)
         })
         .catch(error => {
             // Some error happened
