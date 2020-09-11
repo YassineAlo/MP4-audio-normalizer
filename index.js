@@ -13,7 +13,7 @@ const asyncNorm = async () => {
         // console.log(inputList[i])
         // Saves initial filename
         var filename = inputList[i]
-        console.log("En cours: " + filename + "("+i+"/"+inputList.length+")")
+        console.log("En cours: " + filename + "("+(i+1)+"/"+inputList.length+")")
         // Change name to avoid ffmpeg command errors
         fs.renameSync('./input/'+ inputList[i], './input/input'+ i + '.mp4')
         await normalize({
