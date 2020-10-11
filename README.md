@@ -16,7 +16,7 @@ A simple mp4 audio normalizer written in NodeJS (EBU R128)
 Make sure your folder path doesn't contain special characters such as spaces
 
 Ex : 
-`C:/Users/john doe/Documents/MP4-audio-normalizer` will throw an error 
+`C:/Users/john doe/Documents/MP4-audio-normalizer` will throw an error /
 `C:/Users/john_doe/Documents/MP4-audio-normalizer` will work
 
 
